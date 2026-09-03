@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.3/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script>
+
+    <title>Drill 2</title>
+
+    <style>
+
+        #everything{ 
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+                    
+        }
+
+        body {
+            background-image: url(https://i.pinimg.com/1200x/39/e2/09/39e2098fc60815a08bb4ac1ce7b04232.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            
+        }
+
+        .row {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: flex;
+        }
+
+        #sign {
+            background-color: rgba(240, 239, 239, 0.8);
+            height: 300px;
+            width: 350px;
+            font-weight: bolder;
+            font-size: 25px;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+            border-radius: 50px;
+        }
+
+        #calc {
+            background-color: rgba(240, 239, 239, 0.8);
+            height: 300px;
+            width: 350px;
+            font-weight: bolder;
+            font-size: 20px;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+            border-radius: 50px;
+        }
+
+        h4{
+            font-size: 60px;
+            font-weight: bolder;
+            font-size: 25px;
+            color: crimson;
+        }
+
+        #holders{
+            line-height: 1.8;
+        }
+    </style>
+</head>
+
+<body>
+    <div class id="everything">
+    <div class="row">
+
+        <div id="sign"> 
+            <h4>Identification </h4>
+             <form>
+              <input type="text" id="user_input" placeholder="Enter your username"><br>
+                <input type="button" py-click="greetings" value="Sign-in">
+         </form>
+
+    <br>
+    <div id="greeting_result"></div>
+    </div>
+
+        <div id="calc">
+               <h4>My Calculator</h4>
+            <form>
+                <div id="holders">
+                    <input type="number" id="num1" placeholder="Enter the first number">
+                    <input type="number" id="num2" placeholder="Enter the second number">
+                </div>
+                <input type="button" py-dblclick="adding_numbers" value="Add">
+                <input type="button" py-click="subtracting_numbers" value="Subtract">
+                <input type="button" py-click="multiplying_numbers" value="Multiplication">
+                <input type="button" py-click="dividing_numbers" value="Division">
+            </form>
+
+            <br>
+            <div id="result" style="color: rgb(1, 1, 10); font-size: 30px;"></div>
+        </div>
+
+    </div>
+    </div>
+
+    <py-script src="main.py"></py-script>
+
+</body>
+</html>
+
